@@ -160,104 +160,39 @@ $(window).load(function () {
 	$('#preload').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
 
 
-	//HEADER ANIMATION
-	$(window).scroll(function () {
-		if ($(".navbar").offset().top > 50) {
-			$(".navbar-fixed-top").addClass("top-nav-collapse");
-		} else {
-			$(".navbar-fixed-top").removeClass("top-nav-collapse");
-		}
-	});
+	// //HEADER ANIMATION
+	// $(window).scroll(function () {
+	// 	if ($(".navbar").offset().top > 50) {
+	// 		$(".navbar-fixed-top").addClass("top-nav-collapse");
+	// 	} else {
+	// 		$(".navbar-fixed-top").removeClass("top-nav-collapse");
+	// 	}
+	// });
 
 });
 
-// CONTACT FORM FUNCTION
-var contact_send = function () {
-
-	'use strict';
-
-	var name = $("#name").val();
-	var email = $("#email").val();
-	var phone = $("#phone").val();
-	var type = $("#type").val();
-
-	if (name == "") { alert("name area is empty!"); $("#name").focus(); }
-	else if (email == "") { alert("email address area is empty!"); $("#email").focus(); }
-	else if (phone == "") { alert("phone number area is empty!"); $("#phone").focus(); }
-	else if (type == "") { alert("register type isn't selected!"); $("#type").focus(); }
-	else {
-		$.post("contact.send.php", { name: name, email: email, phone: phone, type: type }, function (result) {
-			if (result == "SUCCESS") {
-				alert("Your contact form is sent.");
-				setTimeout(function () {
-					$("#name").val("");
-					$("#email").val("");
-					$("#phone").val("");
-					$("#type").val("");
-				}, 3000);
-			} else {
-				alert("Your contact form isn't sent. Please check fields and try again.");
-			}
-		});
-	}
-
-};
-
-/* Newsletter Functions */
-var newsletter_send = function () {
-
-	'use strict';
-
-	var email = $("#newsletter_email").val();
-	if (email == "") { alert("Your email address is empty!"); $("#newsletter_email").focus(); }
-	else {
-		$.post("newsletter.send.php", { email: email }, function (result) {
-
-			console.log(result);
-
-			if (result == "SUCCESS") {
-				alert("Thank you. Your email is added to our database.");
-				setTimeout(function () { $("#newsletter_email").val(""); }, 3000);
-			}
-
-			else if (result == "EXIST") {
-				alert("Error. Your email address is already exist our database.");
-				$("#newsletter_email").focus();
-			}
-
-			else {
-				alert("Error. Your email isn't added to our database.");
-				$("#newsletter_email").focus();
-			}
-
-		});
-	}
-
-};
-
-
-//GOOGLE MAP
-function init_map() {
-	var myOptions = {
-		zoom: 14,
-		center: new google.maps.LatLng(40.801485408197856, -73.96745953467104), //change the coordinates
-		mapTypeId: google.maps.MapTypeId.ROADMAP,
-		scrollwheel: false,
-		styles: [{ featureType: 'all', stylers: [{ saturation: -100 }, { gamma: 0.50 }] }]
-	};
-	map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
-	marker = new google.maps.Marker({
-		map: map,
-		position: new google.maps.LatLng(40.801485408197856, -73.96745953467104) //change the coordinates
-	});
-	infowindow = new google.maps.InfoWindow({
-		content: "<b>Evential 2014</b><br/>1571 Hidden Terrace<br/> New York"  //add your address
-	});
-	google.maps.event.addListener(marker, "click", function () {
-		infowindow.open(map, marker);
-	});
-	infowindow.open(map, marker);
-}
+// //GOOGLE MAP
+// function init_map() {
+// 	var myOptions = {
+// 		zoom: 14,
+// 		center: new google.maps.LatLng(40.801485408197856, -73.96745953467104), //change the coordinates
+// 		mapTypeId: google.maps.MapTypeId.ROADMAP,
+// 		scrollwheel: false,
+// 		styles: [{ featureType: 'all', stylers: [{ saturation: -100 }, { gamma: 0.50 }] }]
+// 	};
+// 	map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
+// 	marker = new google.maps.Marker({
+// 		map: map,
+// 		position: new google.maps.LatLng(40.801485408197856, -73.96745953467104) //change the coordinates
+// 	});
+// 	infowindow = new google.maps.InfoWindow({
+// 		content: "<b>Evential 2014</b><br/>1571 Hidden Terrace<br/> New York"  //add your address
+// 	});
+// 	google.maps.event.addListener(marker, "click", function () {
+// 		infowindow.open(map, marker);
+// 	});
+// 	infowindow.open(map, marker);
+// }
 //google.maps.event.addDomListener(window, 'load', init_map);
 
 
