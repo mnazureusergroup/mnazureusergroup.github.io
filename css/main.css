@@ -164,7 +164,7 @@ h4 {
 	background:url(../img/bg.jpg) bottom center no-repeat;
 	width:100%;
 	max-height:auto;
-	height:600px;
+	height:400px;
 	margin-bottom:15px;
 	position:relative;
 	display:table;
@@ -176,7 +176,7 @@ h4 {
 #top h1 {
 	font-family:'Economica';
 	font-size:80px;
-	margin-top:5em;
+	margin-top:2em;
 	-webkit-text-stroke: 1px black;
 	filter: drop-shadow(2px 2px 2px black)
 }
@@ -212,8 +212,16 @@ h4 {
 	filter: drop-shadow(2px 2px 15px black)
 }
 
+#slack {
+	background-color: #4A154B
+}
+
+#slack h2 {
+	color: white;
+}
+
 #slack a.button {
-	background-color: #4A154B;
+	background-color: #2EB67D;
 }
 
 /* OVERVIEW */
