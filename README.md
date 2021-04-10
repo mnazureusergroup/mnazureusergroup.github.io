@@ -16,7 +16,7 @@ All of the content is static at the moment.
 ***js/main.js*** change this block:
 
 ```javascript
-$('#countdown').countdown({ until: new Date("2021-05-06T16:00:00.000-05:00"); }); // enter event day
+$('#countdown').countdown({ until: new Date("2021-05-06T16:00:00.000-05:00") }); // enter event day
 ```
 
 ## Update the Event count and Member Count
