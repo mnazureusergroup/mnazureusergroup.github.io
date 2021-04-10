@@ -7,7 +7,10 @@ All of the content is static at the moment.
 **index.html** change this block:
 
 ```html
-
+<div class="col-lg-8 col-lg-offset-2 text-center">
+    <h1 class="uppercase">MN Azure User Group</h1>
+    <h3>Next Event: Thursday, May 6 4:00 PM CST </h3>
+</div>
 ```
 
 ***js/main.js*** change this block:
