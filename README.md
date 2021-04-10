@@ -13,6 +13,11 @@ All of the content is static at the moment.
 </div>
 ```
 
+and this block
+```html
+  <a class="button button-big button-dark" href="https://www.meetup.com/Minneapolis-Azure-Cloud-Computing-Meetup/events/vcmvkrycchbjb/">register for the next event</a>
+```
+
 ***js/main.js*** change this block:
 
 ```javascript
