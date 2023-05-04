@@ -15,7 +15,7 @@ jQuery(document).ready(function ($) {
 	//COUNTDOWN TIMER
 	var newYear = new Date();
 	newYear = new Date(newYear.getFullYear() + 1, 1 - 1, 1);
-	$('#countdown').countdown({ until: new Date("2023-05-04T16:00:00.000-05:00") }); // enter event day
+	$('#countdown').countdown({ until: new Date("2023-06-01T16:00:00.000-05:00") }); // enter event day
 
 	$('#removeCountdown').toggle(
 		function () {
